@@ -31,7 +31,14 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:JERMOntology2="http://www.mygrid.org.uk/ontology/JERMOntology#13"
      xmlns:Sex="http://www.mygrid.org.uk/ontology/JERMOntology#Sex/">
-    <owl:Ontology rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology"/>
+    <owl:Ontology rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology">
+        <owl:versionInfo>1.6-alpha</owl:versionInfo>
+        <dc:description>an ontology to describe the entities and relationships in the SEEK database, a Systems Biology environment for the sharing and exchange of data and models. The SysMO-SEEK database contains the work of the SysMO consortium (Systems Biology of Micro-Organisms) 
+
+This is used as part of http://www.seek4science.org
+
+It was developed by Katy Wolstencroft, with contributions from Stuart Owen and Olga Krebs</dc:description>
+    </owl:Ontology>
     
 
 
@@ -520,14 +527,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#hasType"/>
-                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Technology_type"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#investigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Organism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#investigates"/>
-                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Organism"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#hasType"/>
+                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Technology_type"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -561,26 +568,20 @@
     <owl:Class rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#Asset">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#hasContributor"/>
-                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Person"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#description"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#isPartOf"/>
                 <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Assay"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#SEEKID"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#hasContributor"/>
+                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#itemProducedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Project"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -591,8 +592,14 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#itemProducedBy"/>
-                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Project"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#description"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#SEEKID"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Equipment"/>
@@ -916,12 +923,6 @@
         <rdfs:subClassOf rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Asset"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#isAssociatedWith"/>
-                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Sample"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#hasFormat"/>
                 <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Data_file_format"/>
             </owl:Restriction>
@@ -930,6 +931,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#hasPart"/>
                 <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Factors_studied"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#isAssociatedWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Sample"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:identifier>JERM:00011</dc:identifier>
@@ -1078,7 +1085,7 @@
     <owl:Class rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#Experiment_description">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#SEEKID"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#description"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1090,13 +1097,13 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#description"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#title"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#title"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#SEEKID"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1220,12 +1227,6 @@
         <rdfs:subClassOf rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Experimental_factors"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#timepoint"/>
-                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#units"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -1243,6 +1244,12 @@
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#timepoint"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>also known as ExperimentalConditions when used to set up initial conditions for an experiment/assay</rdfs:comment>
         <dc:identifier>JERM:00027</dc:identifier>
@@ -1523,13 +1530,13 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <rdfs:subClassOf rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Equipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#instrument_model"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#manufacturer"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#manufacturer"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#instrument_model"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1915,6 +1922,12 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <rdfs:subClassOf rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Asset"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#isconstructedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#hasFormat"/>
                 <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Model_execution_environment"/>
             </owl:Restriction>
@@ -1923,12 +1936,6 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#termsofDistribution"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#isconstructedFrom"/>
-                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Publication"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2214,14 +2221,8 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
     <owl:Class rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#Project">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#hasItem"/>
-                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Asset"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#hasItem"/>
-                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Experiment_description"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#investigates"/>
+                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Organism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2232,8 +2233,14 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#investigates"/>
-                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Organism"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#hasItem"/>
+                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Experiment_description"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#hasItem"/>
+                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Asset"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>collaborative, funded scientific investigations</dc:description>
@@ -2522,8 +2529,8 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <rdfs:subClassOf rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Bio_material"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#samplingDate"/>
-                <owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#isDerivedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Specimen"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2534,8 +2541,8 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#isDerivedFrom"/>
-                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Specimen"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#samplingDate"/>
+                <owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2647,8 +2654,20 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <rdfs:subClassOf rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Bio_material"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#description"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Lab_internal_ID"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&age_of_specimen;culture"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#hasCharacteristics"/>
+                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#CultureGrowthType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2665,6 +2684,12 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#description"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#date_of_death"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -2673,24 +2698,6 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#External_supplier_ID"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Lab_internal_ID"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&age_of_specimen;culture"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#hasCharacteristics"/>
-                <owl:someValuesFrom rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#CultureGrowthType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>This class is equivalent to the &#39;sample groups&#39; class in the EBI BioSamples data model and to a bacterial culture in the sysmo context, where we refer to it as &#39;Culture Growth&#39; instead of specimen</rdfs:comment>
@@ -2740,13 +2747,13 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <rdfs:subClassOf rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Organism"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#External_supplier_ID"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Lab_internal_ID"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#Lab_internal_ID"/>
+                <owl:onProperty rdf:resource="http://www.mygrid.org.uk/ontology/JERMOntology#External_supplier_ID"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3535,6 +3542,14 @@ The interaction between models and data is at the heart of SysMO, so the SBO sho
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#Experimental_assay_type"/>
+            <rdf:Description rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#Model_analysis_type"/>
+            <rdf:Description rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#informatics_analysis_type"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#Data"/>
             <rdf:Description rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#Model"/>
             <rdf:Description rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#Publication"/>
@@ -3552,14 +3567,6 @@ The interaction between models and data is at the heart of SysMO, so the SBO sho
             <rdf:Description rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#Microarray_factors"/>
             <rdf:Description rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#Proteomics_factors"/>
             <rdf:Description rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#Technology_type"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#Experimental_assay_type"/>
-            <rdf:Description rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#Model_analysis_type"/>
-            <rdf:Description rdf:about="http://www.mygrid.org.uk/ontology/JERMOntology#informatics_analysis_type"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
