@@ -3471,7 +3471,7 @@ It was developed by Katy Wolstencroft, with contributions from Stuart Owen and O
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Experimental_assay_type</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">experimental assay</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Experimental Assay</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:identifier"/>
@@ -3962,7 +3962,7 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Model_analysis_type</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">modelling analysis</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Modelling Analysis</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:identifier"/>
@@ -4523,7 +4523,7 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#informatics_analysis_type</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">informatics analysis</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Informatics Analysis</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

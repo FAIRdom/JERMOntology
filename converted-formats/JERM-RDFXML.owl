@@ -517,7 +517,13 @@ It was developed by Katy Wolstencroft, with contributions from Stuart Owen and O
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&JERMOntology;hasType"/>
-                <owl:someValuesFrom rdf:resource="&JERMOntology;Assay_type"/>
+                <owl:someValuesFrom rdf:resource="&JERMOntology;Technology_type"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&JERMOntology;investigates"/>
+                <owl:someValuesFrom rdf:resource="&JERMOntology;Organism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -529,13 +535,7 @@ It was developed by Katy Wolstencroft, with contributions from Stuart Owen and O
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&JERMOntology;hasType"/>
-                <owl:someValuesFrom rdf:resource="&JERMOntology;Technology_type"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;investigates"/>
-                <owl:someValuesFrom rdf:resource="&JERMOntology;Organism"/>
+                <owl:someValuesFrom rdf:resource="&JERMOntology;Assay_type"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&JERMOntology;Investigation"/>
@@ -563,7 +563,13 @@ It was developed by Katy Wolstencroft, with contributions from Stuart Owen and O
     <owl:Class rdf:about="&JERMOntology;Asset">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;title"/>
+                <owl:onProperty rdf:resource="&JERMOntology;description"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&JERMOntology;SEEKID"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -575,26 +581,20 @@ It was developed by Katy Wolstencroft, with contributions from Stuart Owen and O
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&JERMOntology;hasContributor"/>
+                <owl:someValuesFrom rdf:resource="&JERMOntology;Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&JERMOntology;itemProducedBy"/>
                 <owl:someValuesFrom rdf:resource="&JERMOntology;Project"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;SEEKID"/>
+                <owl:onProperty rdf:resource="&JERMOntology;title"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;description"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;hasContributor"/>
-                <owl:someValuesFrom rdf:resource="&JERMOntology;Person"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&JERMOntology;Equipment"/>
@@ -1080,7 +1080,13 @@ It was developed by Katy Wolstencroft, with contributions from Stuart Owen and O
     <owl:Class rdf:about="&JERMOntology;Experiment_description">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;title"/>
+                <owl:onProperty rdf:resource="&JERMOntology;description"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&JERMOntology;SEEKID"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1092,13 +1098,7 @@ It was developed by Katy Wolstencroft, with contributions from Stuart Owen and O
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;SEEKID"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;description"/>
+                <owl:onProperty rdf:resource="&JERMOntology;title"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1115,7 +1115,7 @@ It was developed by Katy Wolstencroft, with contributions from Stuart Owen and O
     <!-- http://www.mygrid.org.uk/ontology/JERMOntology#Experimental_assay_type -->
 
     <owl:Class rdf:about="&JERMOntology;Experimental_assay_type">
-        <rdfs:label>experimental assay</rdfs:label>
+        <rdfs:label>Experimental Assay</rdfs:label>
         <rdfs:subClassOf rdf:resource="&JERMOntology;Assay_type"/>
         <rdfs:isDefinedBy>An experimental assay is an assay carried out in a laboratory</rdfs:isDefinedBy>
         <dc:identifier>JERM:00043</dc:identifier>
@@ -1228,12 +1228,6 @@ It was developed by Katy Wolstencroft, with contributions from Stuart Owen and O
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;units"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -1246,6 +1240,12 @@ It was developed by Katy Wolstencroft, with contributions from Stuart Owen and O
                     </owl:Restriction>
                 </owl:unionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&JERMOntology;units"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>also known as ExperimentalConditions when used to set up initial conditions for an experiment/assay</rdfs:comment>
         <dc:identifier>JERM:00027</dc:identifier>
@@ -1930,14 +1930,14 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;termsofDistribution"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&JERMOntology;isconstructedFrom"/>
+                <owl:someValuesFrom rdf:resource="&JERMOntology;Publication"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;isconstructedFrom"/>
-                <owl:someValuesFrom rdf:resource="&JERMOntology;Publication"/>
+                <owl:onProperty rdf:resource="&JERMOntology;termsofDistribution"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>computational models developed by SEEK consortium members</dc:description>
@@ -1949,7 +1949,7 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
     <!-- http://www.mygrid.org.uk/ontology/JERMOntology#Model_analysis_type -->
 
     <owl:Class rdf:about="&JERMOntology;Model_analysis_type">
-        <rdfs:label>modelling analysis</rdfs:label>
+        <rdfs:label>Modelling Analysis</rdfs:label>
         <rdfs:subClassOf rdf:resource="&JERMOntology;Assay_type"/>
         <dc:identifier>JERM:00044</dc:identifier>
         <dc:description>a model analysis type is a model &quot;assay&quot; type to classify the information contained within the model. The categories correspond to the existing categories in JWS Onnline, a tool for model simmulation</dc:description>
@@ -2218,8 +2218,8 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
     <owl:Class rdf:about="&JERMOntology;Project">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;hasItem"/>
-                <owl:someValuesFrom rdf:resource="&JERMOntology;Experiment_description"/>
+                <owl:onProperty rdf:resource="&JERMOntology;investigates"/>
+                <owl:someValuesFrom rdf:resource="&JERMOntology;Organism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2230,8 +2230,8 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;investigates"/>
-                <owl:someValuesFrom rdf:resource="&JERMOntology;Organism"/>
+                <owl:onProperty rdf:resource="&JERMOntology;hasItem"/>
+                <owl:someValuesFrom rdf:resource="&JERMOntology;Experiment_description"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2532,14 +2532,14 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;samplingDate"/>
-                <owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
+                <owl:onProperty rdf:resource="&JERMOntology;isAssociatedWith"/>
+                <owl:someValuesFrom rdf:resource="&JERMOntology;Data"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;isAssociatedWith"/>
-                <owl:someValuesFrom rdf:resource="&JERMOntology;Data"/>
+                <owl:onProperty rdf:resource="&JERMOntology;samplingDate"/>
+                <owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2614,13 +2614,13 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <rdfs:subClassOf rdf:resource="&JERMOntology;Equipment"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;version"/>
+                <owl:onProperty rdf:resource="&JERMOntology;title"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;title"/>
+                <owl:onProperty rdf:resource="&JERMOntology;version"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2651,6 +2651,36 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <rdfs:subClassOf rdf:resource="&JERMOntology;Bio_material"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&JERMOntology;hasCharacteristics"/>
+                <owl:someValuesFrom rdf:resource="&JERMOntology;CultureGrowthType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&JERMOntology;isDerivedFrom"/>
+                <owl:someValuesFrom rdf:resource="&JERMOntology;Strain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&JERMOntology;Lab_internal_ID"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&JERMOntology;date_of_death"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&JERMOntology;age_of_specimen/culture"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&JERMOntology;description"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -2663,37 +2693,7 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;hasCharacteristics"/>
-                <owl:someValuesFrom rdf:resource="&JERMOntology;CultureGrowthType"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&JERMOntology;External_supplier_ID"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;Lab_internal_ID"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;isDerivedFrom"/>
-                <owl:someValuesFrom rdf:resource="&JERMOntology;Strain"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;date_of_death"/>
-                <owl:someValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;age_of_specimen/culture"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2744,13 +2744,13 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <rdfs:subClassOf rdf:resource="&JERMOntology;Organism"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;Lab_internal_ID"/>
+                <owl:onProperty rdf:resource="&JERMOntology;External_supplier_ID"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&JERMOntology;External_supplier_ID"/>
+                <owl:onProperty rdf:resource="&JERMOntology;Lab_internal_ID"/>
                 <owl:someValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3030,7 +3030,7 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
     <!-- http://www.mygrid.org.uk/ontology/JERMOntology#informatics_analysis_type -->
 
     <owl:Class rdf:about="&JERMOntology;informatics_analysis_type">
-        <rdfs:label>informatics analysis</rdfs:label>
+        <rdfs:label>Informatics Analysis</rdfs:label>
         <rdfs:subClassOf rdf:resource="&JERMOntology;Assay_type"/>
         <dc:description>an informatics analysis is an &quot;assay&quot; performed in silico, employing informatics techniques to analyse data</dc:description>
         <dc:identifier>JERM:00045</dc:identifier>
@@ -3540,19 +3540,6 @@ The interaction between models and data is at the heart of SysMO, so the SBO sho
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&JERMOntology;Fluxomics"/>
-            <rdf:Description rdf:about="&JERMOntology;Genomics"/>
-            <rdf:Description rdf:about="&JERMOntology;Interactomics"/>
-            <rdf:Description rdf:about="&JERMOntology;Organism_or_strain_characterisation"/>
-            <rdf:Description rdf:about="&JERMOntology;Proteomics"/>
-            <rdf:Description rdf:about="&JERMOntology;Reactomics"/>
-            <rdf:Description rdf:about="&JERMOntology;Single_cell"/>
-            <rdf:Description rdf:about="&JERMOntology;Transcriptomics"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&JERMOntology;Assay_type"/>
             <rdf:Description rdf:about="&JERMOntology;Bio_material"/>
             <rdf:Description rdf:about="&JERMOntology;Characteristic_for_specimen_or_sample"/>
@@ -3566,6 +3553,15 @@ The interaction between models and data is at the heart of SysMO, so the SBO sho
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&JERMOntology;Data"/>
+            <rdf:Description rdf:about="&JERMOntology;Model"/>
+            <rdf:Description rdf:about="&JERMOntology;Publication"/>
+            <rdf:Description rdf:about="&JERMOntology;SOP"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&JERMOntology;Experimental_assay_type"/>
             <rdf:Description rdf:about="&JERMOntology;Model_analysis_type"/>
             <rdf:Description rdf:about="&JERMOntology;informatics_analysis_type"/>
@@ -3574,10 +3570,14 @@ The interaction between models and data is at the heart of SysMO, so the SBO sho
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&JERMOntology;Data"/>
-            <rdf:Description rdf:about="&JERMOntology;Model"/>
-            <rdf:Description rdf:about="&JERMOntology;Publication"/>
-            <rdf:Description rdf:about="&JERMOntology;SOP"/>
+            <rdf:Description rdf:about="&JERMOntology;Fluxomics"/>
+            <rdf:Description rdf:about="&JERMOntology;Genomics"/>
+            <rdf:Description rdf:about="&JERMOntology;Interactomics"/>
+            <rdf:Description rdf:about="&JERMOntology;Organism_or_strain_characterisation"/>
+            <rdf:Description rdf:about="&JERMOntology;Proteomics"/>
+            <rdf:Description rdf:about="&JERMOntology;Reactomics"/>
+            <rdf:Description rdf:about="&JERMOntology;Single_cell"/>
+            <rdf:Description rdf:about="&JERMOntology;Transcriptomics"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
