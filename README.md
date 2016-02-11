@@ -13,7 +13,7 @@ This JERM ontology was created by Katy Wolstencroft[1], with contributions from 
 Contributing
 ------------
 
-Please visit http://seek4science.org/JERMOntology for details about contributing to the JERM.
+Please visit http://docs.seek4science.org/contributing.html for details about contributing to the JERM.
 
 You can also add an issue on this GitHub page at https://github.com/SysMO-DB/JERMOntology/issues if you wish to discuss the addition of a new term.
 
