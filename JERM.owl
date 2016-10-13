@@ -166,6 +166,9 @@
         <Class IRI="#Dry_biomass"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ELISA"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Electron_scanning_microscopy"/>
     </Declaration>
     <Declaration>
@@ -307,10 +310,22 @@
         <Class IRI="#Immune_precipitation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Immuno_electron_microscopy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Immunoassay"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Immunostaining"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Inductively_coupled_plasma_mass_spectrometry"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Initial_rate_experiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Inoculation_density"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Instrument"/>
@@ -467,6 +482,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Organism"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organism_colony"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Organism_or_strain_characterisation"/>
@@ -688,10 +706,22 @@
         <Class IRI="#Volume"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Western_blot"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#aerobic"/>
     </Declaration>
     <Declaration>
         <Class IRI="#anaerobic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#autoCarbonSource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#biofilm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#carbonSourcePhenotype"/>
     </Declaration>
     <Declaration>
         <Class IRI="#cell"/>
@@ -706,6 +736,9 @@
         <Class IRI="#characteristics_for_assay"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#chemoenergy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#deletion"/>
     </Declaration>
     <Declaration>
@@ -716,6 +749,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#disease_state"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#electronDonorPhenotype"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#energySourcePhenotype"/>
     </Declaration>
     <Declaration>
         <Class IRI="#experimental_assay"/>
@@ -733,6 +772,9 @@
         <Class IRI="#haploid"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#heteroCarbonSource"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#hexaploid"/>
     </Declaration>
     <Declaration>
@@ -746,6 +788,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#insertion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#lithoElectronDonor"/>
     </Declaration>
     <Declaration>
         <Class IRI="#material_entity"/>
@@ -772,10 +817,16 @@
         <Class IRI="#organism_part"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#organoElectronDonor"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#pH"/>
     </Declaration>
     <Declaration>
         <Class IRI="#phenotype"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#photoEnergy"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ploidy"/>
@@ -1323,6 +1374,10 @@
         <Class IRI="#Mass"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ELISA"/>
+        <Class IRI="#Immunostaining"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Electron_scanning_microscopy"/>
         <Class IRI="#Microscopy"/>
     </SubClassOf>
@@ -1542,12 +1597,28 @@
         <Class IRI="#Proteomics"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Immuno_electron_microscopy"/>
+        <Class IRI="#Immunostaining"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Immunoassay"/>
+        <Class IRI="#Experimental_assay_type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Immunostaining"/>
+        <Class IRI="#Technology_type"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Inductively_coupled_plasma_mass_spectrometry"/>
         <Class IRI="#Mass_spectrometry"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Initial_rate_experiment"/>
         <Class IRI="#Enzymatic_activity_measurements"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Inoculation_density"/>
+        <Class IRI="#Factors_studied"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Instrument"/>
@@ -1812,6 +1883,10 @@
             <DataProperty IRI="#NCBI_ID"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organism_colony"/>
+        <Class IRI="#Biological_entity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Organism_or_strain_characterisation"/>
@@ -2235,12 +2310,28 @@
         <Class IRI="#Factors_studied"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Western_blot"/>
+        <Class IRI="#Immunostaining"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#aerobic"/>
         <Class IRI="#respiration"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#anaerobic"/>
         <Class IRI="#respiration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#autoCarbonSource"/>
+        <Class IRI="#carbonSourcePhenotype"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#biofilm"/>
+        <Class IRI="#Organism_colony"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#carbonSourcePhenotype"/>
+        <Class IRI="#phenotype"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#cell"/>
@@ -2259,6 +2350,10 @@
         <Class IRI="#Experimental_factors"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#chemoenergy"/>
+        <Class IRI="#energySourcePhenotype"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#deletion"/>
         <Class IRI="#mutationType"/>
     </SubClassOf>
@@ -2273,6 +2368,14 @@
     <SubClassOf>
         <Class IRI="#disease_state"/>
         <Class IRI="#Characteristics_for_sample"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#electronDonorPhenotype"/>
+        <Class IRI="#phenotype"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#energySourcePhenotype"/>
+        <Class IRI="#phenotype"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#experimental_assay"/>
@@ -2309,6 +2412,10 @@
         <Class IRI="#ploidy"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#heteroCarbonSource"/>
+        <Class IRI="#carbonSourcePhenotype"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#hexaploid"/>
         <Class IRI="#ploidy"/>
     </SubClassOf>
@@ -2330,6 +2437,10 @@
     <SubClassOf>
         <Class IRI="#insertion"/>
         <Class IRI="#mutationType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#lithoElectronDonor"/>
+        <Class IRI="#electronDonorPhenotype"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#material_type"/>
@@ -2374,12 +2485,20 @@
         <Class IRI="#Characteristics_for_sample"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#organoElectronDonor"/>
+        <Class IRI="#electronDonorPhenotype"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#pH"/>
         <Class IRI="#Factors_studied"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#phenotype"/>
         <Class IRI="#Characteristics_for_sample"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#photoEnergy"/>
+        <Class IRI="#energySourcePhenotype"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ploidy"/>
