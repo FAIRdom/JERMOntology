@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.mygrid.org.uk/ontology/JERMOntology"
+     xml:base="http://jermontology.org/ontology/JERMOntology"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.mygrid.org.uk/ontology/JERMOntology">
-    <Prefix name="" IRI="http://www.mygrid.org.uk/ontology/JERMOntology"/>
+     ontologyIRI="http://jermontology.org/ontology/JERMOntology">
+    <Prefix name="" IRI="http://jermontology.org/ontology/JERMOntology"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
@@ -14,10 +14,10 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="owl2xml" IRI="http://www.w3.org/2006/12/owl2-xml#"/>
-    <Prefix name="JERMOntology" IRI="http://www.mygrid.org.uk/ontology/JERMOntology#"/>
-    <Prefix name="JERMOntology2" IRI="http://www.mygrid.org.uk/ontology/JERMOntology#13"/>
-    <Prefix name="JERMOntology3" IRI="http://www.mygrid.org.uk/ontology/JERMOntology#2"/>
-    <Prefix name="JERMOntology4" IRI="http://www.mygrid.org.uk/ontology/JERMOntology#2-"/>
+    <Prefix name="JERMOntology" IRI="http://jermontology.org/ontology/JERMOntology#"/>
+    <Prefix name="JERMOntology2" IRI="http://jermontology.org/ontology/JERMOntology#13"/>
+    <Prefix name="JERMOntology3" IRI="http://jermontology.org/ontology/JERMOntology#2"/>
+    <Prefix name="JERMOntology4" IRI="http://jermontology.org/ontology/JERMOntology#2-"/>
     <Declaration>
         <Class IRI="#Metabolite_profiling"/>
     </Declaration>
@@ -859,6 +859,9 @@
         <Class IRI="#Protein_structural_analysis"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isValidatedBy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Temperature"/>
     </Declaration>
     <Declaration>
@@ -896,6 +899,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#MALDI_TOF"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#simulationData"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SBML_model"/>
@@ -1146,19 +1152,16 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Asset"/>
-        <ObjectUnionOf>
-            <Class IRI="#treatment"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="#isPartOf"/>
-                <Class IRI="#Assay"/>
-            </ObjectSomeValuesFrom>
-        </ObjectUnionOf>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasContributor"/>
+            <Class IRI="#Person"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Asset"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasContributor"/>
-            <Class IRI="#Person"/>
+            <ObjectProperty IRI="#isPartOf"/>
+            <Class IRI="#Assay"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1364,6 +1367,13 @@
     <SubClassOf>
         <Class IRI="#Data_sample"/>
         <Class IRI="#Asset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Data_sample"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#Biological_entity"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Detectors"/>
@@ -1825,20 +1835,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasFormat"/>
             <Class IRI="#Model_format"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Model"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isconstructedFrom"/>
-            <Class IRI="#Data"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Model"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isconstructedFrom"/>
-            <Class IRI="#Publication"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2578,6 +2574,34 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#modelling_analysis"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#simulationData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#modelling_analysis"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isValidatedBy"/>
+            <Class IRI="#Data"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#modelling_analysis"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isconstructedFrom"/>
+            <Class IRI="#Data"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#modelling_analysis"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isconstructedFrom"/>
+            <Class IRI="#Publication"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#mutationType"/>
         <Class IRI="#Characteristics_for_sample"/>
     </SubClassOf>
@@ -2676,6 +2700,10 @@
     <SubClassOf>
         <Class IRI="#semi-aerobic"/>
         <Class IRI="#respiration"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#simulationData"/>
+        <Class IRI="#Asset"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#tissue"/>
@@ -4755,6 +4783,11 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#sequence_accession</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sequence_accession</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <IRI>#simulationData</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">JERM:00217</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
