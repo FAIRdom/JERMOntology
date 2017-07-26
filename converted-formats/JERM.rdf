@@ -563,7 +563,7 @@
         <owl:disjointWith rdf:resource="http://jermontology.org/ontology/JERMOntology#Technology_type"/>
         <dc:description>An assay type describes the type of experiment being performed</dc:description>
         <dc:identifier>JERM:00024</dc:identifier>
-        <rdfs:comment>The assay_type hierarchy allows scientists to categorise their experimental assays, informatics analyses and computational models within SysMO</rdfs:comment>
+        <rdfs:comment>The assay_type hierarchy allows scientists to categorise their experimental assays, informatics analyses and computational models</rdfs:comment>
         <rdfs:label>Assay Type</rdfs:label>
     </owl:Class>
     
@@ -926,7 +926,7 @@
 
     <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#CultureGrowthType">
         <rdfs:subClassOf rdf:resource="http://jermontology.org/ontology/JERMOntology#Characteristics_for_sample"/>
-        <dc:description>SysMO studies microorganisms. Each experiment is performed on cell cultures, so it is essential to record the type of culture in use each time</dc:description>
+        <dc:description>Experiments can be performed on cell cultures, so it is essential to record the type of culture in use each time</dc:description>
         <dc:identifier>JERM:00026</dc:identifier>
         <rdfs:label>Culture Growth Type</rdfs:label>
     </owl:Class>
