@@ -289,6 +289,9 @@
         <Class IRI="#Data_sample"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#DOI"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#usesTechnology"/>
     </Declaration>
     <Declaration>
@@ -452,6 +455,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#DNA_Methylation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#PubMedID"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Sample_preparation_protocol"/>
@@ -2101,6 +2107,20 @@
         <Class IRI="#Asset"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Publication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#DOI"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Publication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#PubMedID"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Quality_control_type"/>
         <Class IRI="#Microarray_factors"/>
     </SubClassOf>
@@ -2562,6 +2582,13 @@
     <SubClassOf>
         <Class IRI="#modelling_analysis"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasOutput"/>
+            <Class IRI="#simulationData"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#modelling_analysis"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasPart"/>
             <Class IRI="#Model"/>
         </ObjectSomeValuesFrom>
@@ -2571,13 +2598,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasPart"/>
             <Class IRI="#Model_analysis_type"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#modelling_analysis"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasPart"/>
-            <Class IRI="#simulationData"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -2636,6 +2656,13 @@
     <SubClassOf>
         <Class IRI="#ploidy"/>
         <Class IRI="#Characteristics_for_sample"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#process"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasContributor"/>
+            <Class IRI="#Person"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#process"/>
@@ -2704,6 +2731,13 @@
     <SubClassOf>
         <Class IRI="#simulationData"/>
         <Class IRI="#Asset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#simulationData"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPartOf"/>
+            <Class IRI="#modelling_analysis"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#tissue"/>
@@ -2966,6 +3000,10 @@
         <Class IRI="#Technology_type"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
+        <DataProperty IRI="#DOI"/>
+        <DataProperty IRI="#identifier"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#ECNumber"/>
         <DataProperty IRI="#identifier"/>
     </SubDataPropertyOf>
@@ -2979,6 +3017,10 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#NCBI_ID"/>
+        <DataProperty IRI="#identifier"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#PubMedID"/>
         <DataProperty IRI="#identifier"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
@@ -6173,11 +6215,6 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <AnnotationProperty abbreviatedIRI="dc:identifier"/>
         <IRI>#simulationData</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">JERM:00217</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#simulationData</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Simulation Data</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

@@ -251,6 +251,14 @@
     
 
 
+    <!-- http://jermontology.org/ontology/JERMOntology#DOI -->
+
+    <owl:DatatypeProperty rdf:about="http://jermontology.org/ontology/JERMOntology#DOI">
+        <rdfs:subPropertyOf rdf:resource="http://jermontology.org/ontology/JERMOntology#identifier"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://jermontology.org/ontology/JERMOntology#ECNumber -->
 
     <owl:DatatypeProperty rdf:about="http://jermontology.org/ontology/JERMOntology#ECNumber">
@@ -278,6 +286,14 @@
     <!-- http://jermontology.org/ontology/JERMOntology#NCBI_ID -->
 
     <owl:DatatypeProperty rdf:about="http://jermontology.org/ontology/JERMOntology#NCBI_ID">
+        <rdfs:subPropertyOf rdf:resource="http://jermontology.org/ontology/JERMOntology#identifier"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://jermontology.org/ontology/JERMOntology#PubMedID -->
+
+    <owl:DatatypeProperty rdf:about="http://jermontology.org/ontology/JERMOntology#PubMedID">
         <rdfs:subPropertyOf rdf:resource="http://jermontology.org/ontology/JERMOntology#identifier"/>
     </owl:DatatypeProperty>
     
@@ -2630,6 +2646,18 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
 
     <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#Publication">
         <rdfs:subClassOf rdf:resource="http://jermontology.org/ontology/JERMOntology#Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#DOI"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#PubMedID"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:description>publication abstracts relating to other SEEK assets</dc:description>
         <dc:identifier>JERM:00014</dc:identifier>
         <rdfs:label>Publication</rdfs:label>
@@ -3582,6 +3610,12 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <rdfs:subClassOf rdf:resource="http://jermontology.org/ontology/JERMOntology#Assay"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#simulationData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasPart"/>
                 <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Model"/>
             </owl:Restriction>
@@ -3590,12 +3624,6 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasPart"/>
                 <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Model_analysis_type"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasPart"/>
-                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#simulationData"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3716,6 +3744,12 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
     <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#process">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasContributor"/>
+                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasInput"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -3819,8 +3853,13 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
 
     <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#simulationData">
         <rdfs:subClassOf rdf:resource="http://jermontology.org/ontology/JERMOntology#Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#modelling_analysis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:identifier>JERM:00217</dc:identifier>
-        <rdfs:label>Simulation Data</rdfs:label>
     </owl:Class>
     
 
