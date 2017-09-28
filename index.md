@@ -22,7 +22,7 @@ the results of the experiment.
 
 ### JERM Ontology
 
-![JERM Ontology Classes]({{ site.baseurl }}/images/jerm_ontology_classes.png "Classes"){: .ontology_classes .pic}
+![JERM Ontology Classes]({{ site.baseurl }}/images/jerm2_ontology_classes.png "Classes"){: .ontology_classes .pic}
 
 The [JERM Ontology](https://bioportal.bioontology.org/ontologies/JERM) is an application ontology designed to describe the items in SEEK and the relationships between them 
 (for example, data, models, experiment descriptions, results, samples, protocols, standard operating procedures and publications); 
