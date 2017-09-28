@@ -18,5 +18,5 @@ This JERM ontology was created by Katy Wolstencroft[1], with contributions from 
 
 Please visit http://docs.seek4science.org/contributing.html for details about contributing to the JERM.
 
-You can also add an issue on this GitHub page at https://github.com/SysMO-DB/JERMOntology/issues if you wish to discuss the addition of a new term.
+You can also add an issue on this GitHub page at https://github.com/FAIRdom/JERMOntology/issues if you wish to discuss the addition of a new term.
 
