@@ -49,7 +49,7 @@ Data produced using continuously developed new experimental techniques must be i
 The flexibility and extensibility of RDF is ideal for such conditions. Using the JERM framework means that adding a new data type is possible without requiring the re-design of the underlying data model. Any new data type would have the same set of minimal metadata elements, plus some elements specific to that data. This would allow aggregation at any point of commonality (for example, the biological samples, the same factors studied, or membership of the same study), but the fact that there are differences between datasets is an advantage and not a complication.
 
 To access a latest version of the JERM ontology, or if you wish to be involved in its development and make contributions, 
-please visit our [JERM Ontology Github Repository](https://github.com/FAIRdom/JERMOntology).
+please visit our [JERM Ontology GitHub Repository](https://github.com/FAIRdom/JERMOntology).
 
 ### JERM Templates and RightField
 
