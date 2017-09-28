@@ -38,7 +38,7 @@ Most Minimum Information Models exist as checklists, or XML specifications (XML 
 which have been collected under the umbrella of MIBBI (Minimum Information for Biological and Biomedical Investigations). 
 The JERM takes the specification one step further, expressing the minimum information model as an [OWL ontology](http://en.wikipedia.org/wiki/Web_Ontology_Language).
 
-Currently, the JERM ontology contained approximately 260 classes and 45 properties. 
+Currently, the JERM ontology contains approximately 295 classes and 50 properties. 
 It is represented in OWL in order to capture rich associations between SEEK assets and to allow complex queries and reasoning. 
 The terms and properties of the JERM ontology therefore provide a schema for managing and extracting SEEK metadata.
 
