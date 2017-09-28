@@ -98,3 +98,22 @@ img.screenshot {
 thead > tr {
     background-color: #f8f8f8;
 }
+
+img.pic {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    box-shadow: -4px -4px 6px #ddd;
+}
+
+img.ontology_classes {
+    float: right;
+}
+
+img.rightfield_template {
+    float: left;
+}
+
+h2 {
+    text-align:center;
+}
