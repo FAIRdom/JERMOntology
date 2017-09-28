@@ -1,13 +1,10 @@
-#baseurl: /seek
 
-current_seek_version: 1.4.1
-current_docker_tag: 1.4
 
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
   - jekyll-feed
 
-name: FAIRDOM
-url: http://docs.seek4science.org
-author: FAIRDOM
+name: JERMOntology
+url: http://jermontology.org
+author: Stuart Owen
