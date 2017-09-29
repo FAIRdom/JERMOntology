@@ -10,7 +10,7 @@ layout: page
 The JERM provides a framework to describe SEEK assets and the relationships between assets and the experiments that created them. 
 Crucially, all assets are related to the scientists that created them and the projects they originate from, 
 so the model captures provenance information as well as physical links between assets. 
-JERM definitions for each type of data in SEEK is different, but highly overlapping and they comply with existing [MIBBI](http://www.biosharing.org/standards/mibbi) guidelines where they are available.
+JERM definitions for each type of data in SEEK is different, but highly overlapping and they comply with existing [MIBBI (Minimum Information for Biological and Biomedical Investigations)](http://www.biosharing.org/standards/mibbi) guidelines where they are available.
 
 The JERM describes what type of experiment was performed, who performed it, and what was measured. 
 These elements are common to all data types in Systems Biology, 
@@ -36,7 +36,7 @@ Metadata annotation is both time-consuming and costly, and the biggest benefits 
 but for scientists wishing to reuse data.
 
 Most Minimum Information Models exist as checklists, or XML specifications (XML schemas). There are already over 50, 
-which have been collected under the umbrella of MIBBI (Minimum Information for Biological and Biomedical Investigations). 
+which have been collected under the umbrella of [MIBBI](http://www.biosharing.org/standards/mibbi). 
 The JERM takes the specification one step further, expressing the minimum information model as an [OWL ontology](http://en.wikipedia.org/wiki/Web_Ontology_Language).
 
 Currently, the JERM ontology contains approximately 295 classes and 50 properties. 
@@ -66,6 +66,10 @@ the process of standardized semantic data collection can become part of the exis
 JERM-compliance in SEEK is therefore achieved by the sharing of JERM-compliant spreadsheet templates.
 
 To allow us to embed ontologies into spreadsheets, and enforce the use of semantic controlled vocabularies, 
-without the overhead of understanding semantics or ontologies, we developed [RightField](http://www.rightfield.org.uk/). We call this Semantic annotation by Stealth. RightField is a general tool for embedded semantic terms into spreadsheet templates, and isn't specifically restricted to the JERM.
+without the overhead of understanding semantics or ontologies, we developed [RightField](http://www.rightfield.org.uk/). 
+We call this Semantic annotation by Stealth. RightField is a general tool for embedding semantic terms into spreadsheet templates, 
+and isn't specifically restricted to the JERM.
 
-JERM spreadsheet templates have been developed for a wide range of experimental data types. In collaboration with members of the SysMO consortium, templates have been designed for numerous different types of microarray and RNA-Seq data, proteomics, interactomics, metabolomics, and enzyme kinetics.
+JERM spreadsheet templates have been developed for a wide range of experimental data types. 
+In collaboration with members of the SysMO consortium, templates have been designed for numerous different types of 
+microarray and RNA-Seq data, proteomics, interactomics, metabolomics, and enzyme kinetics.
