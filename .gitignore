@@ -1,1 +1,6 @@
 catalog*.xml
+.idea/
+
+#from gh-pages
+Gemfile.lock
+_site/
