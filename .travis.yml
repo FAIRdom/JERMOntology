@@ -1,0 +1,14 @@
+language: ruby
+
+rvm:
+  - 2.4.0
+
+sudo: false
+
+cache: bundler
+
+branches:
+  only:
+    - gh-pages
+
+script: bundle exec rake test
