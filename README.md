@@ -2,7 +2,7 @@
 
 ## About
 
-The JERM Ontology is an OWL ontology representing the Just Enough Results Model. For more information about JERM please visit: [http://jermontology.org](http://www.seek4science.org/jerm)
+The JERM Ontology is an OWL ontology representing the Just Enough Results Model. For more information about JERM please visit: [http://jermontology.org](http://jermontology.org/)
 
 
 ## Credits
