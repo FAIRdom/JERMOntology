@@ -8,7 +8,7 @@ The JERM Ontology is an OWL ontology representing the Just Enough Results Model.
 ## Credits
 
 
-This JERM ontology was created by [Katy Wolstencroft](https://fair-dom.org/person/katy-wolstencroft/)[1], with contributions from [Stuart Owen](https://fair-dom.org/person/stuart-owen/)[2] and [Olga Krebs]https://fair-dom.org/person/olga-krebs/[3].
+This JERM ontology was created by [Katy Wolstencroft](https://fair-dom.org/person/katy-wolstencroft/)[1], with contributions from [Stuart Owen](https://fair-dom.org/person/stuart-owen/)[2] and [Olga Krebs](https://fair-dom.org/person/olga-krebs/)[3].
 
 1. University of Leiden, Netherlands
 2. University of Manchester, UK
