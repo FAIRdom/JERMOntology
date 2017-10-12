@@ -12,7 +12,10 @@
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="schema" IRI="http://schema.org/"/>
     <Prefix name="owl2xml" IRI="http://www.w3.org/2006/12/owl2-xml#"/>
     <Prefix name="JERMOntology" IRI="http://jermontology.org/ontology/JERMOntology#"/>
     <Prefix name="JERMOntology2" IRI="http://jermontology.org/ontology/JERMOntology#13"/>
@@ -140,6 +143,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Functional_biological_entity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="prov:Entity"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Project"/>
@@ -302,6 +308,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isInvestigatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="prov:wasAttributedTo"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#DOI"/>
@@ -607,6 +616,9 @@
         <Class IRI="#qPCR"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="prov:wasDerivedFrom"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Pressure"/>
     </Declaration>
     <Declaration>
@@ -695,6 +707,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Investigation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="prov:Activity"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Single_cell"/>
@@ -946,6 +961,9 @@
         <Class IRI="#UPLC"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty abbreviatedIRI="prov:wasInfluencedBy"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#phenotype"/>
     </Declaration>
     <Declaration>
@@ -1049,6 +1067,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Nature_protocols"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="prov:Person"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#Methylation_profiling"/>
@@ -1643,6 +1664,10 @@
         <Class IRI="#Mass_spectrometry"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Information_entity"/>
+        <Class abbreviatedIRI="prov:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Initial_rate_experiment"/>
         <Class IRI="#Enzymatic_activity_measurements"/>
     </SubClassOf>
@@ -1758,6 +1783,10 @@
     <SubClassOf>
         <Class IRI="#Mass_spectrometry"/>
         <Class IRI="#Technology_type"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Material_entity"/>
+        <Class abbreviatedIRI="prov:Entity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mathematical_model_type"/>
@@ -1960,6 +1989,10 @@
     <SubClassOf>
         <Class IRI="#Person"/>
         <Class IRI="#Material_entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class abbreviatedIRI="prov:Person"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Person"/>
@@ -2914,6 +2947,18 @@
         <Class IRI="#Organism"/>
         <Class IRI="#Protein"/>
     </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="prov:Activity"/>
+        <Class abbreviatedIRI="prov:Entity"/>
+    </DisjointClasses>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#isDerivedFrom"/>
+        <ObjectProperty abbreviatedIRI="prov:wasDerivedFrom"/>
+    </EquivalentObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasContributor"/>
+        <ObjectProperty abbreviatedIRI="prov:wasAttributedTo"/>
+    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCreator"/>
         <ObjectProperty IRI="#hasContributor"/>
@@ -2921,6 +2966,14 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#isCreatorOf"/>
         <ObjectProperty IRI="#isContributorOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="prov:wasAttributedTo"/>
+        <ObjectProperty abbreviatedIRI="prov:wasInfluencedBy"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="prov:wasDerivedFrom"/>
+        <ObjectProperty abbreviatedIRI="prov:wasInfluencedBy"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasContributor"/>
@@ -5005,7 +5058,7 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
         <IRI>#Person</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">a SEEK consortium member</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A Person who is associated with a SEEK project</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:identifier"/>
@@ -6393,6 +6446,36 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Sex/Gender</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Sex / Gender</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>prov:Activity</AbbreviatedIRI>
+        <IRI>http://www.w3.org/ns/prov-o#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>prov:Entity</AbbreviatedIRI>
+        <IRI>http://www.w3.org/ns/prov-o#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>prov:Person</AbbreviatedIRI>
+        <IRI>http://www.w3.org/ns/prov-o#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>prov:wasAttributedTo</AbbreviatedIRI>
+        <IRI>http://www.w3.org/ns/prov-o#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>prov:wasDerivedFrom</AbbreviatedIRI>
+        <IRI>http://www.w3.org/ns/prov-o#</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>prov:wasInfluencedBy</AbbreviatedIRI>
+        <IRI>http://www.w3.org/ns/prov-o#</IRI>
     </AnnotationAssertion>
 </Ontology>
 
