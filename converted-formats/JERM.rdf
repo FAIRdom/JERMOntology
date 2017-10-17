@@ -1208,28 +1208,6 @@
     
 
 
-    <!-- http://jermontology.org/ontology/JERMOntology#Experimental_assay -->
-
-    <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#Experimental_assay">
-        <rdfs:subClassOf rdf:resource="http://jermontology.org/ontology/JERMOntology#Assay"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasPart"/>
-                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Data"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasPart"/>
-                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Experimental_assay_type"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dc:identifier>JERM:00194</dc:identifier>
-        <rdfs:label>Experimental Assay</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://jermontology.org/ontology/JERMOntology#Experimental_assay_type -->
 
     <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#Experimental_assay_type">
@@ -2236,52 +2214,6 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
     
 
 
-    <!-- http://jermontology.org/ontology/JERMOntology#Modelling_analysis -->
-
-    <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#Modelling_analysis">
-        <rdfs:subClassOf rdf:resource="http://jermontology.org/ontology/JERMOntology#Assay"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasOutput"/>
-                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Simulation_data"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasPart"/>
-                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Model"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasPart"/>
-                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Model_analysis_type"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#isConstructedFrom"/>
-                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Data"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#isConstructedFrom"/>
-                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Publication"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#isValidatedBy"/>
-                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Data"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dc:identifier>JERM:00196</dc:identifier>
-        <rdfs:label>Modelling Analysis</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://jermontology.org/ontology/JERMOntology#Molecule_labelling -->
 
     <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#Molecule_labelling">
@@ -3110,7 +3042,7 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#isPartOf"/>
-                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Modelling_analysis"/>
+                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#modelling_analysis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:identifier>JERM:00217</dc:identifier>
@@ -3585,6 +3517,28 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
     
 
 
+    <!-- http://jermontology.org/ontology/JERMOntology#experimental_assay -->
+
+    <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#experimental_assay">
+        <rdfs:subClassOf rdf:resource="http://jermontology.org/ontology/JERMOntology#Assay"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Experimental_assay_type"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>JERM:00194</dc:identifier>
+        <rdfs:label>Experimental Assay</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://jermontology.org/ontology/JERMOntology#explantation -->
 
     <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#explantation">
@@ -3709,6 +3663,52 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <rdfs:subClassOf rdf:resource="http://jermontology.org/ontology/JERMOntology#Microarray"/>
         <dc:identifier>JERM:00133</dc:identifier>
         <rdfs:label>miRNA Microarray</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://jermontology.org/ontology/JERMOntology#modelling_analysis -->
+
+    <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#modelling_analysis">
+        <rdfs:subClassOf rdf:resource="http://jermontology.org/ontology/JERMOntology#Assay"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Simulation_data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Model"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Model_analysis_type"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#isConstructedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#isConstructedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Publication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#isValidatedBy"/>
+                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>JERM:00196</dc:identifier>
+        <rdfs:label>Modelling Analysis</rdfs:label>
     </owl:Class>
     
 
