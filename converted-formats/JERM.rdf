@@ -1697,6 +1697,22 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
     
 
 
+    <!-- http://jermontology.org/ontology/JERMOntology#Informatics_analysis -->
+
+    <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#Informatics_analysis">
+        <rdfs:subClassOf rdf:resource="http://jermontology.org/ontology/JERMOntology#Assay"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#informatics_analysis_type"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier>JERM:00195</dc:identifier>
+        <rdfs:label>Informatics Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://jermontology.org/ontology/JERMOntology#Information_entity -->
 
     <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#Information_entity">
@@ -3641,22 +3657,6 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <rdfs:subClassOf rdf:resource="http://jermontology.org/ontology/JERMOntology#ploidy"/>
         <dc:identifier>JERM:00173</dc:identifier>
         <rdfs:label>Hexaploid</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://jermontology.org/ontology/JERMOntology#informatics_analysis -->
-
-    <owl:Class rdf:about="http://jermontology.org/ontology/JERMOntology#informatics_analysis">
-        <rdfs:subClassOf rdf:resource="http://jermontology.org/ontology/JERMOntology#Assay"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://jermontology.org/ontology/JERMOntology#hasPart"/>
-                <owl:someValuesFrom rdf:resource="http://jermontology.org/ontology/JERMOntology#informatics_analysis_type"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dc:identifier>JERM:00195</dc:identifier>
-        <rdfs:label>Informatics Analysis</rdfs:label>
     </owl:Class>
     
 

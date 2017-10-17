@@ -514,6 +514,9 @@
         <Class IRI="#Data_file_format"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Informatics_analysis"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Limited_media_growth"/>
     </Declaration>
     <Declaration>
@@ -911,9 +914,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Partial_differential_equation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#informatics_analysis"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Person"/>
@@ -1659,6 +1659,17 @@
     <SubClassOf>
         <Class IRI="#Inductively_coupled_plasma_mass_spectrometry"/>
         <Class IRI="#Mass_spectrometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Informatics_analysis"/>
+        <Class IRI="#Assay"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Informatics_analysis"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#informatics_analysis_type"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Initial_rate_experiment"/>
@@ -2647,17 +2658,6 @@
     <SubClassOf>
         <Class IRI="#hexaploid"/>
         <Class IRI="#ploidy"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#informatics_analysis"/>
-        <Class IRI="#Assay"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#informatics_analysis"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasPart"/>
-            <Class IRI="#informatics_analysis_type"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#informatics_analysis_type"/>
@@ -4301,6 +4301,16 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Inductively_coupled_plasma_mass_spectrometry</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Inductively Coupled Plasma Mass Spectrometry</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
+        <IRI>#Informatics_analysis</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">JERM:00195</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Informatics_analysis</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Informatics Analysis</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:identifier"/>
@@ -6037,16 +6047,6 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hexaploid</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hexaploid</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
-        <IRI>#informatics_analysis</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">JERM:00195</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#informatics_analysis</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Informatics Analysis</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="dc:description"/>
