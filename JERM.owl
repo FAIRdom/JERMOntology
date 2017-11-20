@@ -8,6 +8,7 @@
      ontologyIRI="http://jermontology.org/ontology/JERMOntology">
     <Prefix name="" IRI="http://jermontology.org/ontology/JERMOntology"/>
     <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -6476,6 +6477,184 @@ Liquid chromatography (LC) is a separation technique in which the mobile phase i
         <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
         <AbbreviatedIRI>prov:wasInfluencedBy</AbbreviatedIRI>
         <IRI>http://www.w3.org/ns/prov-o#</IRI>
+    </AnnotationAssertion>
+
+    <Declaration>
+        <DataProperty abbreviatedIRI="dct:date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dct:description"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dct:isFormatOf"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dct:PhysicalResource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dct:format"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dct:isPartOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dct:title"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dct:Agent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dct:creator"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="dct:identifier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dct:contributor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dct:MethodOfInstruction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="dct:FileFormat"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dct:hasPart"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Format"/>
+        <Class abbreviatedIRI="dct:FileFormat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Material_entity"/>
+        <Class abbreviatedIRI="dct:PhysicalResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class abbreviatedIRI="dct:Agent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Protocol"/>
+        <Class abbreviatedIRI="dct:MethodOfInstruction"/>
+    </SubClassOf>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#hasPart"/>
+        <ObjectProperty abbreviatedIRI="dct:hasPart"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="#isPartOf"/>
+        <ObjectProperty abbreviatedIRI="dct:isPartOf"/>
+    </EquivalentObjectProperties>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasContributor"/>
+        <ObjectProperty abbreviatedIRI="dct:contributor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCreator"/>
+        <ObjectProperty abbreviatedIRI="dct:creator"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasFormat"/>
+        <ObjectProperty abbreviatedIRI="dct:format"/>
+    </SubObjectPropertyOf>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#isFormatOf"/>
+        <ObjectProperty abbreviatedIRI="dct:isFormatOf"/>
+    </DisjointObjectProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="#description"/>
+        <DataProperty abbreviatedIRI="dct:description"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="#identifier"/>
+        <DataProperty abbreviatedIRI="dct:identifier"/>
+    </EquivalentDataProperties>
+    <EquivalentDataProperties>
+        <DataProperty IRI="#title"/>
+        <DataProperty abbreviatedIRI="dct:title"/>
+    </EquivalentDataProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#dateOfDeath"/>
+        <DataProperty abbreviatedIRI="dct:date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#donationDate"/>
+        <DataProperty abbreviatedIRI="dct:date"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#samplingDate"/>
+        <DataProperty abbreviatedIRI="dct:date"/>
+    </SubDataPropertyOf>
+
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:Agent</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:FileFormat</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:MethodOfInstruction</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:PhysicalResource</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:contributor</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:creator</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:date</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:description</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:format</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:hasPart</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:identifier</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:isFormatOf</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:isPartOf</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>dct:title</AbbreviatedIRI>
+        <AbbreviatedIRI>dct:</AbbreviatedIRI>
     </AnnotationAssertion>
 </Ontology>
 
