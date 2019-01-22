@@ -1103,6 +1103,10 @@
         <Class IRI="#Mathematical_model_type"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Amplicon"/>
+        <Class IRI="#Sequencing"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Amplification"/>
         <Class IRI="#Genomics"/>
     </SubClassOf>
