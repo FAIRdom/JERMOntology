@@ -23,5 +23,5 @@ layout: page
 
 ### FAIRDOM
 
-[http://fairdom.eu](http://fairdom.eu)
+[http://fair-dom.org](http://fair-dom.org)
 
